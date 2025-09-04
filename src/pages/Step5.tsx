@@ -13,7 +13,7 @@ const Step5: React.FC = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setProgress(100);
-      setTimeout(() => setShowButton(true), 500);
+      setTimeout(() => setShowButton(true), 1000);
     }, 100);
 
     return () => clearTimeout(timer);
@@ -57,7 +57,7 @@ const Step5: React.FC = () => {
           {/* Progress Bar */}
           <div className="w-full bg-muted rounded-full h-3 mb-6 overflow-hidden">
             <div 
-              className="h-full bg-gradient-primary transition-all duration-[3000ms] ease-out rounded-full"
+              className="h-full bg-gradient-primary transition-all duration-[60000ms] ease-linear rounded-full"
               style={{ width: `${progress}%` }}
             />
           </div>
