@@ -21,6 +21,7 @@ const App = () => (
         <Toaster />
         <Sonner />
         <BrowserRouter>
+          <div id="container-8106b1d01a2987bd56d0282fb509900b"></div>
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/step1" element={<Step1 />} />
