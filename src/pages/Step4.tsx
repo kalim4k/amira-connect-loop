@@ -1,7 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import AmiraButton from '@/components/AmiraButton';
-import BottomAd from '@/components/BottomAd';
 
 const Step4: React.FC = () => {
   const navigate = useNavigate();
@@ -52,7 +51,6 @@ const Step4: React.FC = () => {
           </div>
         </div>
       </div>
-      <BottomAd />
     </div>
   );
 };

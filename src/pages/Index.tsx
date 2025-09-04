@@ -1,6 +1,5 @@
 import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import BottomAd from '@/components/BottomAd';
 
 const Index = () => {
   const navigate = useNavigate();
@@ -17,7 +16,6 @@ const Index = () => {
           <p className="text-muted-foreground">Chargement...</p>
         </div>
       </div>
-      <BottomAd />
     </div>
   );
 };

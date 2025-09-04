@@ -1,7 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import AmiraButton from '@/components/AmiraButton';
-import BottomAd from '@/components/BottomAd';
 import amiraImage1 from '@/assets/amira-1.jpg';
 
 const Step1: React.FC = () => {
@@ -53,7 +52,6 @@ const Step1: React.FC = () => {
           </div>
         </div>
       </div>
-      <BottomAd />
     </div>
   );
 };
