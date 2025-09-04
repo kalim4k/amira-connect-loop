@@ -4,7 +4,6 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { AmiraProvider } from "@/contexts/AmiraContext";
-import BottomAd from "@/components/BottomAd";
 import Index from "./pages/Index";
 import Step1 from "./pages/Step1";
 import Step2 from "./pages/Step2";
@@ -33,7 +32,6 @@ const App = () => (
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
-          <BottomAd />
         </BrowserRouter>
       </TooltipProvider>
     </AmiraProvider>
