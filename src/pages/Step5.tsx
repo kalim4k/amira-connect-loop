@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import AmiraButton from '@/components/AmiraButton';
 import ErrorModal from '@/components/ErrorModal';
+import BottomAd from '@/components/BottomAd';
 import { useAmira } from '@/contexts/AmiraContext';
 
 const Step5: React.FC = () => {
@@ -107,6 +108,8 @@ const Step5: React.FC = () => {
         isOpen={showError} 
         onRestart={handleRestart}
       />
+      
+      <BottomAd />
     </div>
   );
 };
