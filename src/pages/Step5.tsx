@@ -72,7 +72,7 @@ const Step5: React.FC = () => {
               Patientez, s'il vous plaît
             </h1>
             <p className="text-muted-foreground mb-6">
-              Nous recherchons le numéro, cela peut prendre quelques minutes.
+              Amira prépare votre contact, cela peut prendre quelques minutes.
             </p>
             
             {/* Progress Bar */}
@@ -97,7 +97,7 @@ const Step5: React.FC = () => {
                     : "opacity-50 cursor-not-allowed bg-muted text-muted-foreground"
                 }`}
               >
-                MONTRER LE NUMÉRO
+                CONTACTER
               </AmiraButton>
             </div>
           )}

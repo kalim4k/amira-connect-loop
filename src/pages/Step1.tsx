@@ -8,7 +8,7 @@ const Step1: React.FC = () => {
   const navigate = useNavigate();
 
   const handleResponse = (response: 'yes' | 'no') => {
-    navigate('/step2');
+    navigate('/step3');
   };
 
   return (

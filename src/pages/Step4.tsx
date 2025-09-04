@@ -24,10 +24,10 @@ const Step4: React.FC = () => {
           
           <div className="mb-8">
             <h1 className="text-2xl font-bold text-foreground mb-4">
-              Amira souhaite partager avec vous son numéro WhatsApp
+              Amira souhaite entrer en contact avec vous
             </h1>
             <p className="text-lg text-muted-foreground">
-              Êtes-vous d'accord ?
+              Acceptez-vous qu'elle vous contacte ?
             </p>
           </div>
           
