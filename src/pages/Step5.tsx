@@ -8,18 +8,37 @@ const Step5: React.FC = () => {
   const navigate = useNavigate();
   const { clickCount, incrementClick, resetClick, showError, setShowError } = useAmira();
   const [progress, setProgress] = useState(0);
-  const [showButton, setShowButton] = useState(false);
+  const [showButton, setShowButton] = useState(true);
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setProgress(100);
-      setTimeout(() => setShowButton(true), 1000);
-    }, 100);
+    let interval: NodeJS.Timeout;
+    
+    const startProgress = () => {
+      const startTime = Date.now();
+      const duration = 60000; // 60 seconds
+      
+      interval = setInterval(() => {
+        const elapsed = Date.now() - startTime;
+        const newProgress = Math.min((elapsed / duration) * 100, 100);
+        
+        setProgress(newProgress);
+        
+        if (newProgress >= 100) {
+          clearInterval(interval);
+        }
+      }, 100); // Update every 100ms for smooth animation
+    };
 
-    return () => clearTimeout(timer);
+    startProgress();
+
+    return () => {
+      if (interval) clearInterval(interval);
+    };
   }, []);
 
   const handleShowNumber = () => {
+    if (progress < 100) return; // Ne rien faire si pas à 100%
+    
     if (clickCount >= 5) {
       setShowError(true);
       return;
@@ -57,7 +76,7 @@ const Step5: React.FC = () => {
           {/* Progress Bar */}
           <div className="w-full bg-muted rounded-full h-3 mb-6 overflow-hidden">
             <div 
-              className="h-full bg-gradient-primary transition-all duration-[60000ms] ease-linear rounded-full"
+              className="h-full bg-gradient-primary transition-all duration-100 ease-linear rounded-full"
               style={{ width: `${progress}%` }}
             />
           </div>
@@ -66,10 +85,15 @@ const Step5: React.FC = () => {
         {showButton && (
           <div className="animate-scale-in">
             <AmiraButton
-              variant="elegant"
+              variant={progress >= 100 ? "primary" : "secondary"}
               size="lg"
               onClick={handleShowNumber}
-              className="w-full"
+              disabled={progress < 100}
+              className={`w-full transition-all duration-300 ${
+                progress >= 100 
+                  ? "bg-green-500 hover:bg-green-600 text-white shadow-glow" 
+                  : "opacity-50 cursor-not-allowed bg-muted text-muted-foreground"
+              }`}
             >
               MONTRER LE NUMÉRO
             </AmiraButton>
