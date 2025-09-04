@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import AmiraButton from '@/components/AmiraButton';
 import ErrorModal from '@/components/ErrorModal';
+import TopAd from '@/components/TopAd';
 import BottomAd from '@/components/BottomAd';
 import { useAmira } from '@/contexts/AmiraContext';
 
@@ -57,6 +58,7 @@ const Step5: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gradient-soft flex flex-col">
+      <TopAd />
       <div className="flex-1 flex items-center justify-center p-4">
         <div className="max-w-md w-full bg-card rounded-2xl shadow-soft p-8 text-center animate-fade-in">
           <div className="mb-8">

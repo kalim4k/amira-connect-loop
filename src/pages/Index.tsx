@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import TopAd from '@/components/TopAd';
 import BottomAd from '@/components/BottomAd';
 
 const Index = () => {
@@ -11,6 +12,7 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-gradient-soft flex flex-col">
+      <TopAd />
       <div className="flex-1 flex items-center justify-center">
         <div className="text-center">
           <div className="w-16 h-16 border-4 border-primary border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>

@@ -23,8 +23,12 @@ const BottomAd = () => {
 
     return () => {
       // Cleanup scripts on unmount
-      document.head.removeChild(script);
-      document.head.removeChild(invokeScript);
+      if (document.head.contains(script)) {
+        document.head.removeChild(script);
+      }
+      if (document.head.contains(invokeScript)) {
+        document.head.removeChild(invokeScript);
+      }
     };
   }, []);
 

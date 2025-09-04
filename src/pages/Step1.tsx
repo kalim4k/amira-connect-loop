@@ -1,6 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import AmiraButton from '@/components/AmiraButton';
+import TopAd from '@/components/TopAd';
 import BottomAd from '@/components/BottomAd';
 import amiraImage1 from '@/assets/amira-1.jpg';
 
@@ -13,6 +14,7 @@ const Step1: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gradient-soft flex flex-col">
+      <TopAd />
       <div className="flex-1 flex items-center justify-center p-4">
         <div className="max-w-md w-full bg-card rounded-2xl shadow-soft p-8 text-center animate-fade-in">
           <div className="mb-8">

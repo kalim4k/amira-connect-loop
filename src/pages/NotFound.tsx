@@ -1,5 +1,6 @@
 import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
+import TopAd from '@/components/TopAd';
 import BottomAd from '@/components/BottomAd';
 
 const NotFound = () => {
@@ -14,6 +15,7 @@ const NotFound = () => {
 
   return (
     <div className="min-h-screen flex flex-col bg-gray-100">
+      <TopAd />
       <div className="flex-1 flex items-center justify-center">
         <div className="text-center">
           <h1 className="text-4xl font-bold mb-4">404</h1>
